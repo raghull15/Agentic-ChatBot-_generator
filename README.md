@@ -52,7 +52,7 @@ cd "Chat bot generator"
 ### 2. Setup Auth Server (Express + MongoDB)
 
 ```bash
-cd auth-server
+cd backend-nodejs
 npm install
 ```
 
@@ -74,7 +74,7 @@ node server.js
 ### 3. Setup Backend (Flask + LangChain)
 
 ```bash
-cd rag-chatbot-generator-main
+cd backend-flask
 pip install -r requirements.txt
 ```
 
@@ -97,7 +97,7 @@ python api_server.py
 ### 4. Setup Frontend (React + Vite)
 
 ```bash
-cd agentic-bot
+cd frontend
 npm install
 npm run dev
 ```
@@ -110,7 +110,7 @@ Open http://localhost:5173 in your browser.
 
 ```
 Chat bot generator/
-├── agentic-bot/                 # React Frontend
+├── frontend/                     # React Frontend
 │   ├── src/
 │   │   ├── components/          # Reusable components
 │   │   ├── pages/               # Page components
@@ -119,13 +119,13 @@ Chat bot generator/
 │   │   └── index.css            # Tailwind styles
 │   └── vite.config.js
 │
-├── auth-server/                 # Express Auth Server
+├── backend-nodejs/              # Express Auth Server
 │   ├── models/User.js           # Mongoose user model
 │   ├── middleware/auth.js       # JWT middleware
 │   ├── routes/auth.js           # Auth endpoints
 │   └── server.js                # Entry point
 │
-└── rag-chatbot-generator-main/  # Flask RAG Backend
+└── backend-flask/               # Flask RAG Backend
     ├── api_server.py            # REST API endpoints
     ├── rag_agent_system.py      # RAG logic
     ├── widget/                  # Embeddable widget
@@ -197,13 +197,13 @@ Open 3 terminals:
 
 ```bash
 # Terminal 1 - Auth Server
-cd auth-server && node server.js
+cd backend-nodejs && node server.js
 
 # Terminal 2 - Flask Backend
-cd rag-chatbot-generator-main && python api_server.py
+cd backend-flask && python api_server.py
 
 # Terminal 3 - React Frontend
-cd agentic-bot && npm run dev
+cd frontend && npm run dev
 ```
 
 ### Environment Variables
